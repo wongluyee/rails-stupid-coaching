@@ -1,0 +1,42 @@
+<h1>Stupid Coaching</h1>
+
+<figure>
+  <blockquote class="blockquote">
+    <p><%= params[:question] %></p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    You
+  </figcaption>
+</figure>
+
+<% question = params[:question]%>
+<% if question == 'i am going to work' %>
+  <figure>
+    <blockquote class="blockquote">
+      <p><%= @answers[0] %></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Your coach
+    </figcaption>
+  </figure>
+<% elsif question.last == '?' %>
+  <figure>
+    <blockquote class="blockquote">
+      <p><%= @answers[1] %></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Your coach
+    </figcaption>
+  </figure>
+<% else %>
+  <figure>
+    <blockquote class="blockquote">
+      <p><%= @answers[2] %></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Your coach
+    </figcaption>
+  </figure>
+<% end %>
+
+<%= link_to 'Ask a new question', ask_path %>

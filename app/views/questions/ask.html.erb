@@ -1,0 +1,6 @@
+<h1>Stupid Coaching</h1>
+<p>Ask your coach anything</p>
+<form action="/answer" data-turbo="false" method="get" class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Enter your question here" aria-label="Your question" aria-describedby="button-addon2" name="question" value="<%= params[:answer] %>">
+  <input type="submit" value="Ask!" class="btn btn-outline-secondary" id="button-addon2">
+</form>
